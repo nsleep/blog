@@ -8,21 +8,20 @@ tags: Hexo
 
 <!-- more -->
 
+> 2020/12/05: 趁着更新 Hexo 和 Next 之际，我个人不再用 hexo-git-backup ，继而改用 GitHub Actions 。为操作方便新建一个 repo 来存储 MD 文件和配置文件，而 .github.io 仅作为静态页面展示。
+
 # 一、 准备环境
 
 ## 1. Github账户
-
 注册并新建项目，项目必须要遵守格式：`YOUR_NAME.github.io`
 
 ## 2. 安装[Git](https://git-scm.com/downloads)
-
 - Windows：下载并安装 [git](https://git-scm.com/download/win).
 - 还可以前往 [淘宝 Git for Windows 镜像](https://npm.taobao.org/mirrors/git-for-windows/)
 - [更多参见](https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Git)
 
 
 ### 配置好Git环境
-
 ```bash
 git config --global user.name "your_name"
 git config --global user.email "your_email"
@@ -43,7 +42,6 @@ git config --global core.autocrlf false
 </details>
 
 ### 创建ssh密钥，将公钥上传
-
 ```bash
 ssh-keygen -t rsa -b 4096 -C "your_email" 	# 创建密钥对
 ssh -T git@github.com  						# 测试添加ssh是否成功

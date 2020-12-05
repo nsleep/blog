@@ -6,4 +6,8 @@
 ```bash
 hexo cl ;hexo g -d ; hexo b
 hexo s
+
+git add -all
+git commit -m "."
+git push
 ```
