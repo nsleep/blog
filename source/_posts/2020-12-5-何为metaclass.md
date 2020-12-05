@@ -5,12 +5,11 @@ tags:
 categories:
 ---
 
-<!-- more -->
-
-
 ## 什么是 metaclass ？
 
 metaclass 意为 元类 超类，可以对子类进行操作，就像装饰器那样可以动态定制和修改被装饰的类，metaclass 可以动态的定制或修改继承它的子类。
+
+<!-- more -->
 
 ## metaclass 能解决什么问题？
 

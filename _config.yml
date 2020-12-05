@@ -1,30 +1,29 @@
 title: Simon 的博客
 subtitle: 玄之又玄，众妙之门
 description: 一花一世界，一叶一菩提
-keywords: Simon, 
+keywords: Simon
 author: Simon
 language: zh-CN
 timezone: Asia/Shanghai
 
 
 # ---------------------------------------------------------------
-# URL 网址链接设置
-# 参看: https://hexo.io/zh-cn/docs/configuration.html#网址
-# 
 #:title-文件名称   
 #:post_title-文章标题
 #:id-文章 ID 不固定 #插件固定 hexo-abbrlink
 #:category-分类
-# ---------------------------------------------------------------
-
-url: https://iblog.simon7.top/
-root: /
-permalink: :year:month:day/:post_title/
-# 永久链接中各部分的默认值	
-permalink_defaults: 
+# 
+#pretty_urls: 
 ## 改写 permalink 的值来美化 URL
 ## 是否在永久链接中保留尾部的 index.html，设置为 false 时去除
 ## 是否在永久链接中保留尾部的 .html, 设置为 false 时去除 (对尾部的 index.html无效)
+# ---------------------------------------------------------------
+
+url: https://blog.simon7.top/
+root: /
+permalink: :year:month:day/:post_title/
+# 永久链接中各部分的默认值
+permalink_defaults: 
 #pretty_urls: 
 #  trailing_index: 
 #  trailing_html: 
@@ -32,9 +31,8 @@ permalink_defaults:
 
 # ---------------------------------------------------------------
 # Directory 网址链接设置
-# 参看: https://hexo.io/zh-cn/docs/configuration.html#目录
 # ---------------------------------------------------------------
-
+#目录
 source_dir: source
 public_dir: public
 tag_dir: tags
@@ -44,12 +42,7 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render: [README.md, readme.md,README.MD,模板.md,待办.md,hide]
 
-
-# ---------------------------------------------------------------
-# Directory 网址链接设置
-# 参看: https://hexo.io/zh-cn/docs/configuration.html#文章
-# ---------------------------------------------------------------
-
+#文章
 # 新文章的文件名
 new_post_name: :year-:i_month-:i_day-:title.md #title.md 
 default_layout: post # 预设布局
@@ -62,18 +55,16 @@ external_link:
   exclude: ''
 filename_case: 0 # 把文件名转换成大写(0)或小写(1)
 render_drafts: false # 是否显示草稿
-# 是否启用Asset文件夹(给新文章一个单独的文件夹)
-post_asset_folder: true 
+post_asset_folder: true # 是否启用Asset文件夹(给新文章一个单独的文件夹)
 relative_link: false # 相对链接
 future: false # 显示未来文章
+
 # 代码块设置
 highlight:
   enable: true 
-  # 显示行数
-  line_number: true
+  line_number: true # 显示行数
   auto_detect: true # 自动检测未指定语言的代码
-  # 用 n 个空格替换 tabs
-  tab_replace: '    '
+  tab_replace: '    ' # 用 n 个空格替换 tabs
   wrap: true
   hljs: false
   
@@ -145,18 +136,13 @@ pagination_dir: page # 分页目录
 ## include:/exclude: options only apply to the 'source/' folder
 include:
 exclude:
-ignore:
+ignore: 
 
 # ---------------------------------------------------------------
 # theme 主题
-# 参看: https://hexo.io/zh-cn/docs/configuration.html#扩展
-# 主题: https://hexo.io/themes/
 # ---------------------------------------------------------------
 
 theme: next
-#theme: landscape
-#theme: Butterfly
-
 theme_config:
   scheme: Gemini
   darkmode: true 
@@ -168,8 +154,6 @@ theme_config:
 
 # ---------------------------------------------------------------
 # deploy 部署
-# 参看: https://hexo.io/zh-cn/docs/configuration.html#扩展
-# 部署: https://hexo.io/zh-cn/docs/one-command-deployment#content-inner
 # ---------------------------------------------------------------
 
 deploy:
@@ -185,41 +169,14 @@ deploy:
 #- type: git
 #  repo: git@gitee.com:simon7/simon7.git
 #  branch: master
-#- type: ftpsync 			
+#- type: ftpsync
 #  host: 149.129.51.82
 #  user: chengqian-hexoBlog
 #  pass: SGkjBsr86f
 #  remote: /www/wwwroot/chengqian-hexoBlog
-#  port: 21	
+#  port: 21
 
 
-# ---------------------------------------------------------------
-# Plugins: https://hexo.io/plugins/
-# 参看: https://hexo.io/zh-cn/docs/configuration.html#扩展
-# ---------------------------------------------------------------
-
-# (可用 ?)
-#plugin:
-#  - hexo-git-backup
-#  - hexo-generator-feed
-#  - hexo-generator-index2
-
-# ---------------------------------------------------------------
-# Backup 备份
-## 参看: https://github.com/coneycode/hexo-git-backup
-# ---------------------------------------------------------------
-backup:
-  type: git
-  repository: 
-    origin: git@github.com:nsleep/nsleep.github.io.git,backup
-	   
-
-# ---------------------------------------------------------------
-# RSS订阅
-# 参看: https://github.com/hexojs/hexo-generator-feed
-# ---------------------------------------------------------------
-#feed:
-	   
 
 
 # ---------------------------------------------------------------
@@ -232,12 +189,12 @@ backup:
 # content - 是否包含每篇文章的全部内容。如果false，生成的结果仅覆盖没有主体的标题和其他元信息。默认是true。
 # 排除索引 在文章顶部配置里加入 indexing: false 
 # ---------------------------------------------------------------
-search:
-  path: search.xml 
-  field: post 
-  #content: true
-  format: html
-  limit: 10000
+#search:
+#  path: search.xml 
+#  field: post 
+#  #content: true
+#  format: html
+#  limit: 1000
 
 # hexo-admin authentification
 # 参看：https://github.com/lwz7512/hexo-admin-ehc
