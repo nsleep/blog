@@ -61,7 +61,7 @@ external_link:
   field: post # 对整个网站（site）或文章（post）生效
   exclude: ''
 filename_case: 0 # 把文件名转换成大写(0)或小写(1)
-render_drafts: true # 是否显示草稿
+render_drafts: false # 是否显示草稿
 # 是否启用Asset文件夹(给新文章一个单独的文件夹)
 post_asset_folder: true 
 relative_link: false # 相对链接
