@@ -1,9 +1,9 @@
 name: Hexo Blog CI
 on:
   push:
-    branches: [ backup ]
+    branches: [ main]
   #pull_request:
-  #  branches: [ master ]
+  #  branches: [ main]
 
   workflow_dispatch:
 
@@ -11,13 +11,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@backup
+      #- uses: actions/checkout@master 
 
       - name: Checkout Repository backup branch
-        uses: actions/checkout@backup 
+        uses: actions/checkout@master 
         
       - name: Setup Node.js 12.x 
-        uses: actions/setup-node@backup
+        uses: actions/setup-node@master 
         with:
           node-version: "12.x"
       
@@ -29,8 +29,8 @@ jobs:
           echo "$HEXO_DEPLOY_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa 
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
-          git config --global user.name 'user.name' 
-          git config --global user.email 'user.email'
+          git config --global user.name 'nsleep' 
+          git config --global user.email 'zizhuyun97@163.com'
           npm install hexo-cli -g
           npm install
           
