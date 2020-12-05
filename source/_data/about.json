@@ -1,0 +1,23 @@
+{
+    "avatar": "../static/images/avatar.png",
+    "_avatar": "//img.hb.aicdn.com/7f2a69119aa8bd889ebd1d150f7e1d44423a15b215736b-eBMVJj_fw658",
+    "name": "Simon",
+	"tag": "Web前端/iOS/技术宅",
+    "desc": "与君初相识，犹如故人归",
+    "skills": {
+        "Javascript": 0,
+		"Python": 0,
+		"Java": 0,
+		"invisible-split-line-1": -1,
+
+		"Node.js": 0
+    },
+    "projects": [{
+		"name": "项目A名称",
+		"image": "//img.hb.aicdn.com/7f2a69119aa8bd889ebd1d150f7e1d44423a15b215736b-eBMVJj_fw658",
+		"tags": ["2016年", "项目标签"],
+		"description": "项目A的简介",
+		"link_text": "网站链接",
+		"link": "http://huaban.com/deax9j9urn/"
+	}]
+}

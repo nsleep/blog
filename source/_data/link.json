@@ -1,0 +1,11 @@
+{
+    "social": {
+        "weibo": "https://weibo.com/3292876887",
+        "github": "https://github.com/nsleep",
+		"rss": "/atom.xml"
+    },
+    "extern": {
+	    "主题作者的博客": "https://raytaylorlin.github.io/",
+		"Github地址": "https://github.com/raytaylorlin"
+    }
+}

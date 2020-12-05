@@ -1,0 +1,41 @@
+name: Hexo Blog CI
+on:
+  push:
+    branches: [ backup ]
+  #pull_request:
+  #  branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@backup
+
+      - name: Checkout Repository backup branch
+        uses: actions/checkout@backup 
+        
+      - name: Setup Node.js 12.x 
+        uses: actions/setup-node@backup
+        with:
+          node-version: "12.x"
+      
+      - name: Setup Hexo Dependencies
+        env:
+          HEXO_DEPLOY_PRIVATE_KEY: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY }}
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$HEXO_DEPLOY_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa 
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          git config --global user.name 'user.name' 
+          git config --global user.email 'user.email'
+          npm install hexo-cli -g
+          npm install
+          
+      - name: Deploy Hexo 
+        run: |
+          hexo clean
+          hexo generate 
+          hexo deploy

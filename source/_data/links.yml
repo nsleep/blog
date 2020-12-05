@@ -1,0 +1,52 @@
+
+defaultPic: /static/images/default.png
+shape: square 
+
+defaultlinks:
+- nickname: 廖雪峰的官方网站
+  site: 	https://www.liaoxuefeng.com/
+  avatar:	http://tva2.sinaimg.cn/crop.0.0.180.180.50/62d8efadjw1e8qgp5bmzyj2050050aa8.jpg
+  info: 	
+  
+- nickname: 阮一峰的个人网站
+  ite: 	http://www.ruanyifeng.com/home.html
+  avatar:	http://www.ruanyifeng.com/blog/images/person2.jpg
+  sinfo: 	
+  
+friendslinks :
+- nickname: Kylin
+  site: 	https://www.kylin.show/
+  avatar: 	https://www.kylin.show/img/avatar.jpg
+  info: 	学习不易，努力努力！
+  
+- nickname: 全栈完熊
+  site: 	https://wanxion.com
+  avatar: 	https://wanxion.com/img/avatar.jpg
+  info: 	前后左右端工程师
+  
+- nickname: 動G
+  site: 	http://verbg.com
+  avatar:   https://wang_chen_hui.gitee.io/photo/images/avatar.png
+  info: 	不放松，不醉倒，用学习态度。
+
+- nickname: 隔壁老于
+  site: 	https://blog.gebilaoyu.club
+  avatar: 	https://blog.gebilaoyu.club/img/avatar.png
+  info: 	每天坚持写笔记
+  
+- nickname: 长征部落格
+  site: 	https://www.cz5h.com
+  avatar: 	https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/img/logo.jpg
+  info: 	保持怀疑，独立思考
+  
+nolinks : 
+- nickname: Delimo
+  site: 	https://delimo.tk/
+  avatar: 	https://cdn.jsdelivr.net/gh/Delimo/Gallery/Gallery/Avatar.jpg
+  info: 	生活可能不像你想象得那么美好，但也不会像你想象的那么糟糕
+
+
+- nickname: Fi9Coder  #友链名称
+  site: 	https://www.safeinfo.me  #友链地址
+  avatar: 	https://www.safeinfo.me/images/avatar.gif  #友链头像
+  info: 	致力于Web安全与Python学习,研究,开发。  #友链说明

@@ -1,0 +1,156 @@
+
+{% block content %}
+  {######################}
+  {### LINKS BLOCK ###}
+  {######################}
+	
+	<!-- 引入样式 -->
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+	<!-- 引入组件库 -->
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+	<!-- 引入MDUI -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/mdui/0.4.3/css/mdui.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
+	<!-- 引入Mystyle样式 -->
+	<link rel="stylesheet" href="/css/mystyle.css">
+		
+    <div id="links">
+		<el-tooltip :content=" '当前样式: ' + value " placement="top">
+		    <el-switch
+		      v-model="value"
+		      active-color="#13ce66"
+		      inactive-color="#ff4949"
+			  
+			  active-value="default"
+			  inactive-value="square"
+			  @change = changeStyleClass>
+		    </el-switch>
+		</el-tooltip>
+		  
+        <div class="links-content">
+		
+		<div class="mdui-panel mdui-panel-gapless " mdui-panel="{accordion: false}">
+			
+			<div class="mdui-panel-item mdui-panel-item-open">
+				<div class="mdui-panel-item-header no-icon note warning">
+					<div class="link-info">👨‍🎓 跟着大佬走，成为小大佬</div>
+					<i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+				</div>
+				
+				<div class="mdui-panel-item-body link-navigation">
+				
+					{% for link in site.data.links.defaultlinks  %}
+
+						<div class="card">
+							<a class="link" href="{{ link.site }}" target="_blank">
+							<el-avatar {% if site.data.links.shape === 'square' %} shape="square" {% else %} shape="circle" {% endif %}
+								:size="60" 
+								fit="contain"
+								src="{% if link.avatar !== '' %}{{ link.avatar }}{% endif %}" 
+								@error="errorHandler">
+								
+							      <img class="ava" src="{{ site.data.links.defaultPic }}"/>
+							</el-avatar>
+							
+								<div class="card-header">
+									<div>{{ link.nickname }}</div>
+									<div class="info">{{ link.info }}</div>
+								</div>
+							</a>
+						</div>
+
+					{% endfor %}
+
+				</div>
+			</div>
+			
+			<div class="mdui-panel-item mdui-panel-item-open">
+				<div class="mdui-panel-item-header no-icon note primary">
+					<div class="link-info">🍭 五湖四海的朋友们</div>
+					<i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+				</div>
+				<div class="mdui-panel-item-body link-navigation">
+				
+					{% for link in site.data.links.friendslinks  %}
+				
+						<div class="card">
+							<a class="link" href="{{ link.site }}" target="_blank">
+							<el-avatar {% if site.data.links.shape === 'square' %} shape="square" {% else %} shape="circle" {% endif %}
+								:size="60" 
+								fit="contain"
+								src="{% if link.avatar !== '' %}{{ link.avatar }}{% endif %}" 
+								@error="errorHandler">
+								
+							      <img class="ava" src="{{ site.data.links.defaultPic }}"/>
+							</el-avatar>
+							
+								<div class="card-header">
+									<div>{{ link.nickname }}</div>
+									<div class="info">{{ link.info }}</div>
+								</div>
+							</a>
+						</div>
+				
+					{% endfor %}
+				
+				</div>
+			</div>
+		</div>
+		{{ page.content }}
+		</div>
+	</div>
+
+<script>
+new Vue({
+	el: '#links',
+	data: function() {
+		return { 
+			value: 'default',
+			circleUrl: "/static/images/default.png"
+		}
+	},
+	methods:{
+		changeStyleClass: function(callback){
+			console.log(callback)
+			if(callback !== 'square'){
+				if($('div').hasClass('squareCard')){
+					var l = $(".squareCard").length;
+					for (var i=0;i < l;i++){
+						$(".squareCard>a>span")[0].classList.toggle('el-avatar');
+						$(".squareCard>a>span")[0].classList.toggle('el-avatar--square');
+						
+						$(".squareCard")[0].classList.replace('squareCard','card');
+					}
+				}
+			}else{
+				if($('div').hasClass('card')){
+					var l = $(".card").length;
+					for (var i=0;i < l;i++){
+						$(".card>a>span")[0].classList.toggle('el-avatar');
+						$(".card>a>span")[0].classList.toggle('el-avatar--square');
+						
+						$(".card")[0].classList.replace('card','squareCard');
+						
+					}
+				}
+			}
+		},
+		errorHandler() {
+			return true
+		}
+	}
+})
+</script>
+<script>
+var cards = document.getElementsByClassName("card");
+for (var i=0;i<cards.length;i++){
+	cards[i].onclick = function(){
+		this.firstElementChild.click();
+	}
+}
+</script>
+  {##########################}
+  {### END LINKS BLOCK ###}
+  {##########################}
+{% endblock %}
