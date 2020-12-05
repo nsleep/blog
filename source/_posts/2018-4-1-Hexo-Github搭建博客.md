@@ -180,7 +180,6 @@ deploy:
 	branch: master
 ```
 
-
 ## 2. 生成并部署文章
 
 生成以及部署文章之前，需要安装一个扩展
@@ -195,6 +194,8 @@ npm install hexo-deployer-git --save
 hexo new post "博文名"  #  _posts目录下新建一篇博文
 hexo d -g               #  生成以及部署
 ```
+
+
 
 # 四、 迁移方法
 
