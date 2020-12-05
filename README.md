@@ -10,4 +10,6 @@ hexo s
 git add -all
 git commit -m "."
 git push
+git push  origin main:main
+
 ```

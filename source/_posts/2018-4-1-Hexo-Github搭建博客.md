@@ -227,6 +227,7 @@ hexo migrate rss <source>
 
 
 ## Fast.io
+**fast.io于2021/01/15 关闭服务**
 [Fast](https://fast.io/)支持网盘 `Google Drive` / `OneDrive` / `Github` / `Dropbox` / `MediaFire` / `BOX`。如此获取网盘资源外链，图床不是问题。但也有~~（可忽略的）~~限制，如下：
 - 免费创建5个站点
 - 单个文件最大500M
@@ -285,10 +286,14 @@ deploy:
   region: ap-shanghai   # cos的region
 ```
 
+
+## vercel 自动化部署
+[vercel](https://vercel.com/) 是一个自动构建的工具，只要将生肉（就是那些工作空间的文件）所在的 repo 内容库链接到 vercel 就可以得到一个静态博客。在设置里可以自定义域名，连接的 GitHub/Gitlib/Bitbucket 存储库，可以触发给定分支的部署。
+更有一个分析工具，洞察加载速度，响应能力，可视化的稳定性，只不过这个功能需要耗费。
+
 ## 其他平台
 
 - [Heroku](https://heroku.com)
-- [vercel](https://vercel.com/)
 - [Netlify](https://www.netlify.com/)
 - [Bitbucket](https://bitbucket.org/)
 - [aerobatic](https://www.aerobatic.com/)
