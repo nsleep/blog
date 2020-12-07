@@ -183,8 +183,8 @@ for (var i=0;i<cards.length;i++){
 
 {% note success no-icon %}
 名称：Simon's Blog 
-主页：https://iblog.simon7.top/ 
-头像：https://iblog.simon7.top/static/images/avatar.png
+主页：https://blog.simon7.top/ 
+头像：https://blog.simon7.top/static/images/avatar.png
 说明：一花一世界，一叶一菩提
 {% endnote %}
 
