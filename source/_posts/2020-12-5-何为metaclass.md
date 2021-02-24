@@ -73,5 +73,3 @@ Foo.__init__
 第一，所有的 Python 的用户定义类，都是 type 这个类的实例。
 第二，用户自定义类，只不过是 type 类的 `__call__` 运算符重载
 第三，metaclass 是 type 的子类，通过替换 type 的 `__call__` 运算符重载机制，“超越变形”正常的类
-
-## 使用 metaclass 的风险
