@@ -302,7 +302,7 @@ related_posts:
 # 轻松在线浏览和编辑博客源代码.
 post_edit:
   enable: true
-  url: https://github.com/nsleep/blog/source/ # Link for view source
+  url: https://github.com/nsleep/blog/blob/main/source/ # Link for view source
   #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/ # Link for fork & edit
 
 # 在帖子页脚中显示上一个帖子和下一个帖子
