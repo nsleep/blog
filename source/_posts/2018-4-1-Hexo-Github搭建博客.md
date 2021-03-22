@@ -314,12 +314,16 @@ deploy:
 ```
 npm install -g npm
 ```
+
 更新`Next`主题(hexo >= 5.0)
 ```
 npm install hexo-theme-next@latest
 ```
 
-`npm outdated`以查看所有可升级的插件
+以查看所有可升级的插件
+```
+npm outdated
+```
 
 使用`npm-check`检查更新
 ```
@@ -330,9 +334,10 @@ npm-check -u
 ```
 
 - [Hexo 升级至 5.0 版](https://www.jianshu.com/p/98ac1e253e6e)
-- [Hexo版本升级和Next主题升级之坑](https://blog.csdn.net/whjkm/article/details/81088518)
+- [Hexo 版本升级和 Next 主题升级之坑](https://blog.csdn.net/whjkm/article/details/81088518)
 - [将 Hexo 升级到 v4.2.1](https://zhuanlan.zhihu.com/p/157511323)
+- [Hexo 和 Next 主题升级](https://zhuanlan.zhihu.com/p/163830894)
 
 # 其他相关阅读
 
-[简书-hexo使用grunt实现自动化](https://www.jianshu.com/p/cf6d7a180aa4)
+[简书-hexo使用 grunt 实现自动化](https://www.jianshu.com/p/cf6d7a180aa4)
