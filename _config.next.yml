@@ -36,13 +36,13 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
 #scheme: Pisces
-#scheme: Gemini
+scheme: Gemini
 
 # Dark Mode
-darkmode: false
+darkmode: true
 
 # ---------------------------------------------------------------
 # 网站信息设置
@@ -59,16 +59,17 @@ favicon:
 # 自定义徽标（警告：不支持方案Mist）
 custom_logo: #/uploads/custom-logo.jpg
 
-# Creative Commons 4.0 International License.
 # 创建公共国际许可4.0
 # See: https://creativecommons.org/about/cclicenses/
 # 许可证的可用值: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
 # 如果您希望使用CC许可证的翻译版本，则可以设置语言值, e.g. deed.zh
 # CC许可证提供39种语言, 您可以找到所需的特定且正确的缩写： https://creativecommons.org
+# https://creativecommons.org/choose/
+# by-nc-sa : 署名-非商业性使用-相同方式共享 4.0 国际 
 creative_commons:
   license: by-nc-sa
-  sidebar: false
-  post: false
+  sidebar: true
+  post: true
   language:
 
 
@@ -136,7 +137,7 @@ avatar:
   rotated: true
 
 # Posts / Categories / Tags in sidebar.
-site_state: true
+site_state: false
 
 # Social Links 社交链接
 # Usage: `Key: permalink || icon`
@@ -145,7 +146,7 @@ site_state: true
 social:
   #GitHub: https://github.com/nsleep || fab fa-github
   E-Mail: mailto:simoncq@163.com || fa fa-envelope
-  QQ: http://wpa.qq.com/msgrd?v=3&uin=707347059&site=qq&menu=yes || fab fa-qq
+  #QQ: http://wpa.qq.com/msgrd?v=3&uin=707347059&site=qq&menu=yes || fab fa-qq
   rss: /atom.xml || fa fa-rss
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
@@ -823,7 +824,7 @@ pdf:
 
 # Mermaid tag
 mermaid:
-  enable: false
+  enable: true
   # Available themes: default | dark | forest | neutral
   theme: forest
 
@@ -836,7 +837,7 @@ mermaid:
 # For more information: http://velocityjs.org
 motion:
   enable: true
-  async: false
+  async: true
   transition:
     # Transition variants:
     # 淡入淡出 fadeIn | fadeOut
