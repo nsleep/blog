@@ -1,7 +1,9 @@
-.DS_Store
-Thumbs.db
-db.json
-*.log
+.deploy_git/
+.deploy_heroku/
 node_modules/
 public/
-.deploy*/
+db.json
+*.log
+.DS_Store
+Thumbs.db
+
